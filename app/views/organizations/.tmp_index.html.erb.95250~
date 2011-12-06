@@ -1,0 +1,23 @@
+<%= link_to 'New Organization', new_organization_path %>
+<h1>Listing organizations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>No.of Projects</th>
+    <th>No.of Employees</th>
+  </tr>
+
+<% @organizations.each do |organization| %>
+  <tr>
+  	<td><%= organization.name %></td>
+	<td><%= organization.projects.count %></td>
+	<td><%= organization.employees.count%>
+    <td><%= link_to 'Show', organization %></td>
+    <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
+    <td><%= link_to 'Destroy', organization, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

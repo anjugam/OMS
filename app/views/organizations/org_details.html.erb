@@ -1,0 +1,10 @@
+<table>
+	<tr><td>Organization : <%= @organization.name %></td></tr>
+	<tr><td><%= (link_to 'Edit', edit_organization_path(@organization)) + " | " %></td>
+        <td><%= (link_to 'Delete', @organization, :confirm => 'Are you sure?', :method => :delete)  + " | " %></td>
+		<td><%= link_to 'Back', organizations_path %></td>
+	</tr>
+	<br />
+	<tr><td><%= link_to "All Projects", organization_org_projects_path(@organization)%></td></tr>
+	<tr><td><%= link_to "All Employees", organization_org_employees_path(@organization)%></td></tr>
+</table>

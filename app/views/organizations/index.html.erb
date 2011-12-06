@@ -1,0 +1,20 @@
+<%= link_to 'New Organization', new_organization_path %>
+<h1>Listing organizations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>No.of Projects</th>
+    <th>No.of Employees</th>
+  </tr>
+
+<% @organizations.each do |organization| %>
+  <tr>
+  	<td><%= link_to organization.name, organization_org_details_path(organization) %></td>
+	<td><%= organization.projects.count %></td>
+	<td><%= organization.employees.count%>
+  </tr>
+<% end %>
+</table>
+
+<br />

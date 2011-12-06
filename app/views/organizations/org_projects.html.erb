@@ -1,0 +1,21 @@
+<h2>Projects Handled by <%= @organization.name %></h2>
+<table>
+	<tr>
+		<td><%= (link_to "New Project", new_project_path) + " | "%>
+		    <%= link_to "Back", projects_path %></td></tr>
+	<tr>
+		<td><h3>New Projects</h3></td>
+	</tr>
+	<tr><td><%= @projects.new.each{|a| a} %></td></tr>
+	<br />
+	<tr>
+		<td><h3>Open Projects</h3></td>
+	</tr>
+	<tr><td><%= @projects.open.each{|a| a} %></td></tr>
+	<br />
+	<tr>
+		<td><h3>Closed Projects</h3></td>
+	</tr>
+	<tr><td><%= @projects.closed.each{|a| a} %></td></tr>
+	<br />
+</table>
