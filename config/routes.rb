@@ -1,4 +1,6 @@
 OMS::Application.routes.draw do
+  resources :organizations
+
   resources :employees
 
   resources :projects

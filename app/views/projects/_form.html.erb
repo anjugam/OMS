@@ -1,3 +1,4 @@
+
 <%= form_for(@project) do |f| %>
   <% if @project.errors.any? %>
     <div id="error_explanation">
@@ -10,8 +11,40 @@
       </ul>
     </div>
   <% end %>
-  <%= f.text_field :name %>
-  <%= f.text_field :start_date %>
+  <table>
+  	<tr><td><label>Org Name</label><td><%= f.text_field :organization_id, :value => @organization.name %></td></tr>
+  	<tr>
+	  <td><label>Name</label></td>
+	  <td><%= f.text_field :name %></td>
+	</tr>
+	<tr>
+		<td>
+			<label>Start Date</label>
+		</td>
+		<td>
+			<%= f.text_field :start_date %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label>End Date</label>
+		</td>
+		<td>
+			<%= f.text_field :end_date %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label>Status</label>
+		</td>
+		<td>
+			<%= f.select :status, [["New", "New"], ["Open", "Open"], ["Closed", "Closed"]], :prompt => "Select" %>
+		</td>
+	</tr>
+	  
+	  
+  	
+  </table>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -43,18 +43,9 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: paras5_test
+  database: oms_test
   pool: 5
-  username: paras
-  password: paras123!
-  host: 192.168.1.60
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: cfs_ml_qa_july27
-  pool: 5
-  username: paras
-  password: paras123!
-  host: 192.168.1.50
+  username: postgres
+  password: srishti
+  host: localhost
   port: 5433

@@ -24,8 +24,8 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   # GET /projects/new.xml
   def new
+    @organization = Organization.find(params[:organization_id])
     @project = Project.new
-    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @project }

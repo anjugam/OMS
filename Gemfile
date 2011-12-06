@@ -9,6 +9,10 @@ gem "pg"
 #    gem "webrat"
 #  end
 
+group :development, :test do
+  gem 'rspec-rails'
+end
+
  gem "rspec", ">= 2.0.0.beta.1"
 # gem "rspec-rails", ">= 2.0.0.beta.1"
 

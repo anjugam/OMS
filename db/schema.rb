@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111205155209) do
+ActiveRecord::Schema.define(:version => 20111206151412) do
 
   create_table "employees", :force => true do |t|
     t.string   "name",           :limit => 250
@@ -29,11 +29,11 @@ ActiveRecord::Schema.define(:version => 20111205155209) do
   end
 
   create_table "projects", :force => true do |t|
-    t.string   "name",            :limit => 250
+    t.string   "name"
     t.integer  "organization_id"
     t.date     "start_date"
     t.date     "end_date"
-    t.string   "state",           :limit => 250
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
